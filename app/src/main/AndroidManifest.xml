@@ -19,9 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".competition"></activity>
-       <activity android:name=".dance"></activity>
-        <activity android:name=".salsa"></activity>
+        <activity android:name=".competition" />
+        <activity android:name=".dance" />
+        <activity android:name=".salsa" />
+        <activity android:name=".informals"></activity>
     </application>
 
 </manifest>

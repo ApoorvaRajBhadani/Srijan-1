@@ -17,7 +17,7 @@ import android.widget.ImageView;
 @SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    ImageView nav,compition;
+    ImageView nav,compition,informals;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,20 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         nav = (ImageView)findViewById(R.id.nav);
         compition = (ImageView)findViewById(R.id.competitions);
+        informals = (ImageView)findViewById(R.id.informals);
         compition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,competition.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+                finish();
+            }
+        });
+        informals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,informals.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
                 finish();
