@@ -18,7 +18,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class competition extends  MainActivity {
+public class competition extends MainActivity {
 
     private List<cards> cardsList;
     adaptermain adapter;
@@ -31,7 +31,7 @@ public class competition extends  MainActivity {
         super.replaceContentLayout(R.layout.slide1, R.id.main);
         final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ImageView imageView = (ImageView) findViewById(R.id.nav);
-        slide1HeadingTextView = (TextView)findViewById(R.id.slide1_heading_textView);
+        slide1HeadingTextView = (TextView) findViewById(R.id.slide1_heading_textView);
         slide1HeadingTextView.setText("COMPETITIONS");
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,8 +48,15 @@ public class competition extends  MainActivity {
         //addimg items to list
         //yaha pr change titletext me jo me  naam dunga vo ayenge,drawable me image club name se save krna;
         cardsList.add(new cards(R.color.card1, "Dance", "Grip Your Toes to Dance", R.drawable.footloose));
-        cardsList.add(new cards(R.color.colorAccent, "Music", "Grip Your Toes to Dance", R.drawable.footloose));
-     adapter = new adaptermain(competition.this,cardsList);
+        cardsList.add(new cards(R.color.card2, "Musical", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card3, "Dramatics", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card3, "Photography", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card3, "Fine Arts", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card3, "Films", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card3, "Chayanika(change)", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card3, "Quiz", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card3, "Literary Events", "...pending", R.drawable.footloose));
+        adapter = new adaptermain(competition.this, cardsList);
         recyclerView.setAdapter(adapter);
 
     }
@@ -57,6 +64,6 @@ public class competition extends  MainActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(competition.this,MainActivity.class));
+        startActivity(new Intent(competition.this, MainActivity.class));
     }
 }
