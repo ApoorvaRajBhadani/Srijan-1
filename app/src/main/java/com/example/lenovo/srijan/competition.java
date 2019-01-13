@@ -46,16 +46,16 @@ public class competition extends MainActivity {
 
         cardsList = new ArrayList<>();
         //addimg items to list
-        //yaha pr change titletext me jo me  naam dunga vo ayenge,drawable me image club name se save krna;
+        //yaha pr <<done>>,drawable me image club name se save krna;
         cardsList.add(new cards(R.color.card1, "Dance", "Grip Your Toes to Dance", R.drawable.footloose));
         cardsList.add(new cards(R.color.card2, "Musical", "...pending", R.drawable.footloose));
         cardsList.add(new cards(R.color.card3, "Dramatics", "...pending", R.drawable.footloose));
         cardsList.add(new cards(R.color.card3, "Photography", "...pending", R.drawable.footloose));
         cardsList.add(new cards(R.color.card3, "Fine Arts", "...pending", R.drawable.footloose));
         cardsList.add(new cards(R.color.card3, "Films", "...pending", R.drawable.footloose));
-        cardsList.add(new cards(R.color.card3, "Chayanika(change)", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card3, "Kavyanjali", "...pending", R.drawable.footloose));
         cardsList.add(new cards(R.color.card3, "Quiz", "...pending", R.drawable.footloose));
-        cardsList.add(new cards(R.color.card3, "Literary Events", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card3, "Literary", "...pending", R.drawable.footloose));
         adapter = new adaptermain(competition.this, cardsList);
         recyclerView.setAdapter(adapter);
 

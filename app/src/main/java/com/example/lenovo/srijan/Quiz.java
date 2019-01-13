@@ -19,7 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class dance extends AppCompatActivity {
+public class Quiz extends AppCompatActivity {
 
     String value;
     private List<cards> cardsList;
@@ -40,7 +40,7 @@ public class dance extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         slide2HeadingTextView = (TextView) findViewById(R.id.slide2_heading_textView);
-        slide2HeadingTextView.setText("DANCE");
+        slide2HeadingTextView.setText("QUIZ");
 
 
         cardsList = new ArrayList<>();
@@ -73,11 +73,12 @@ public class dance extends AppCompatActivity {
 
         //addimg items to list
         //R.color.card1,R.color.card2,R.color.card3;
-        cardsList.add(new cards(R.color.card1, "Footloose", value, R.drawable.footloose));//yha pr salsa ki jagah event name or image bhi change krna
-        cardsList.add(new cards(R.color.colorAccent, "Reflection", "Grip Your Toes to Dance", R.drawable.reflection));
-        cardsList.add(new cards(R.color.colorAccent, "Streetbeats", "Grip Your Toes to Dance", R.drawable.streetbeats));
-        cardsList.add(new cards(R.color.colorAccent, "Hustle herd", "Grip Your Toes to Dance", R.drawable.hustleherd));
-        adapter = new adaptermain(dance.this, cardsList);
+        cardsList.add(new cards(R.color.card1, "Pop Culture Quiz", value, R.drawable.culturalquiz));//yha pr salsa ki jagah event name or image bhi change krna
+        cardsList.add(new cards(R.color.colorAccent, "Sports Quiz", "Grip Your Toes to Dance", R.drawable.sportsquiz));
+        cardsList.add(new cards(R.color.colorAccent, "Business Quiz", "Grip Your Toes to Dance", R.drawable.businessquiz));
+        cardsList.add(new cards(R.color.colorAccent, "General Quiz", "Grip Your Toes to Dance", R.drawable.generalquiz));
+
+        adapter = new adaptermain(Quiz.this, cardsList);
 
         recyclerView.setAdapter(adapter);
 
@@ -85,7 +86,7 @@ public class dance extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-       overridePendingTransition(R.anim.slide_out_out,R.anim.slide_in_in);
+        overridePendingTransition(R.anim.slide_out_out,R.anim.slide_in_in);
     }
 }
 

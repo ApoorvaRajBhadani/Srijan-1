@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/titletext"
+            android:id="@+id/slide2_heading_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -23,7 +23,7 @@
             android:layout_marginTop="52dp"
             android:layout_marginEnd="120dp"
             android:layout_marginRight="120dp"
-            android:text="DANCE"
+            tools:text="SLIDE2_HEADING"
             android:textColor="#ffffff"
             android:textSize="35sp"
             app:layout_constraintEnd_toEndOf="parent"

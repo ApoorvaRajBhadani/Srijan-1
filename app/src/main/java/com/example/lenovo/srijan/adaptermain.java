@@ -86,6 +86,94 @@ import java.util.List;
 
 
                         }
+                        if(cards1.getTitletext().equals("Musical")){//yha pr dance ki jagah club wale names jo maine diye hai;
+
+                            Intent intent = new Intent(mctx,Musical.class);
+                            intent.putExtra("actvityname",cards1.getTitletext());
+                            mctx.startActivity(intent);
+                            if(mctx instanceof competition)//yha pr competion ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                                ((competition) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+
+                        }
+                        if(cards1.getTitletext().equals("Dramatics")){//yha pr dance ki jagah club wale names jo maine diye hai;
+
+                            Intent intent = new Intent(mctx,Dramatics.class);
+                            intent.putExtra("actvityname",cards1.getTitletext());
+                            mctx.startActivity(intent);
+                            if(mctx instanceof competition)//yha pr competion ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                                ((competition) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+
+                        }
+                        if(cards1.getTitletext().equals("Photography")){//yha pr dance ki jagah club wale names jo maine diye hai;
+
+                            Intent intent = new Intent(mctx,Photography.class);
+                            intent.putExtra("actvityname",cards1.getTitletext());
+                            mctx.startActivity(intent);
+                            if(mctx instanceof competition)//yha pr competion ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                                ((competition) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+
+                        }
+                        if(cards1.getTitletext().equals("Fine Arts")){//yha pr dance ki jagah club wale names jo maine diye hai;
+
+                            Intent intent = new Intent(mctx,FineArts.class);
+                            intent.putExtra("actvityname",cards1.getTitletext());
+                            mctx.startActivity(intent);
+                            if(mctx instanceof competition)//yha pr competion ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                                ((competition) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+
+                        }
+                        if(cards1.getTitletext().equals("Films")){//yha pr dance ki jagah club wale names jo maine diye hai;
+
+                            Intent intent = new Intent(mctx,Films.class);
+                            intent.putExtra("actvityname",cards1.getTitletext());
+                            mctx.startActivity(intent);
+                            if(mctx instanceof competition)//yha pr competion ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                                ((competition) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+
+                        }
+                        if(cards1.getTitletext().equals("Kavyanjali")){//yha pr dance ki jagah club wale names jo maine diye hai;
+
+                            Intent intent = new Intent(mctx,Kavyanjali.class);
+                            intent.putExtra("actvityname",cards1.getTitletext());
+                            mctx.startActivity(intent);
+                            if(mctx instanceof competition)//yha pr competion ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                                ((competition) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+
+                        }
+                        if(cards1.getTitletext().equals("Quiz")){//yha pr dance ki jagah club wale names jo maine diye hai;
+
+                            Intent intent = new Intent(mctx,Quiz.class);
+                            intent.putExtra("actvityname",cards1.getTitletext());
+                            mctx.startActivity(intent);
+                            if(mctx instanceof competition)//yha pr competion ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                                ((competition) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+
+                        }
+                        if(cards1.getTitletext().equals("Literary")){//yha pr dance ki jagah club wale names jo maine diye hai;
+
+                            Intent intent = new Intent(mctx,Literary.class);
+                            intent.putExtra("actvityname",cards1.getTitletext());
+                            mctx.startActivity(intent);
+                            if(mctx instanceof competition)//yha pr competion ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                                ((competition) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+
+                        }
                         if(cards1.getTitletext().equals("Salsa")){
 
                             Intent intent = new Intent(mctx,salsa.class);
