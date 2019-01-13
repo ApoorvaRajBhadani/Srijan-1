@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,7 @@ public class competition extends  MainActivity {
 
     private List<cards> cardsList;
     adaptermain adapter;
+    TextView slide1HeadingTextView;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -29,6 +31,8 @@ public class competition extends  MainActivity {
         super.replaceContentLayout(R.layout.slide1, R.id.main);
         final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ImageView imageView = (ImageView) findViewById(R.id.nav);
+        slide1HeadingTextView = (TextView)findViewById(R.id.slide1_heading_textView);
+        slide1HeadingTextView.setText("COMPETITIONS");
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
