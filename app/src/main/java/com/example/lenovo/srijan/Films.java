@@ -23,7 +23,7 @@ public class Films extends AppCompatActivity {
 
     String value;
     private List<cards> cardsList;
-    adaptermain adapter;
+    danceadapter adapter;
     TextView slide2HeadingTextView;
 
     @Override
@@ -73,9 +73,9 @@ public class Films extends AppCompatActivity {
 
         //addimg items to list
         //R.color.card1,R.color.card2,R.color.card3;
-        cardsList.add(new cards(R.color.card1, "24 hours Filmmaking Challenge", value, R.drawable.filmmaking24hrs));//yha pr salsa ki jagah event name or image bhi change krna
-        cardsList.add(new cards(R.color.colorAccent, "Workshop (IFP)", "Grip Your Toes to Dance", R.drawable.workshoplci));
-        adapter = new adaptermain(Films.this, cardsList);
+        cardsList.add(new cards(R.color.card1, "24 hours Filmmaking Challenge", R.drawable.filmmaking24hrs));//yha pr salsa ki jagah event name or image bhi change krna
+        cardsList.add(new cards(R.color.colorAccent, "Workshop (IFP)", R.drawable.workshoplci));
+        adapter = new danceadapter(Films.this, cardsList);
 
         recyclerView.setAdapter(adapter);
 

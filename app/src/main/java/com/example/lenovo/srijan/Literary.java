@@ -23,7 +23,7 @@ public class Literary extends AppCompatActivity {
 
     String value;
     private List<cards> cardsList;
-    adaptermain adapter;
+    danceadapter adapter;
     TextView slide2HeadingTextView;
 
     @Override
@@ -76,7 +76,7 @@ public class Literary extends AppCompatActivity {
         cardsList.add(new cards(R.color.card1, "Standup", value, R.drawable.standup));//yha pr salsa ki jagah event name or image bhi change krna
         cardsList.add(new cards(R.color.colorAccent, "Trichonia", "Grip Your Toes to Dance", R.drawable.trichonia));
         cardsList.add(new cards(R.color.colorAccent, "Head On", "Grip Your Toes to Dance", R.drawable.heattoheat));
-        adapter = new adaptermain(Literary.this, cardsList);
+        adapter = new danceadapter(Literary.this, cardsList);
 
         recyclerView.setAdapter(adapter);
 

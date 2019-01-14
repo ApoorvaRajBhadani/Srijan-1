@@ -48,7 +48,7 @@ public class informals extends  MainActivity {
         //addimg items to list
         //yaha pr change titletext me jo me  naam dunga vo ayenge,drawable me image club name se save krna;
         cardsList.add(new cards(R.color.card1, "Magic Mirrors", "Grip Your Toes to Dance", R.drawable.mirror));
-        cardsList.add(new cards(R.color.colorAccent, "Now you see me (Talent Search Platform)", "Grip Your Toes to Dance", R.drawable.talent));
+        cardsList.add(new cards(R.color.colorAccent, "Now you see me", "Grip Your Toes to Dance", R.drawable.talent));
         cardsList.add(new cards(R.color.colorAccent, "Prom", "Grip Your Toes to Dance", R.drawable.prom));
         cardsList.add(new cards(R.color.colorAccent, "Silent DJ", "Grip Your Toes to Dance", R.drawable.silentdj));
         cardsList.add(new cards(R.color.colorAccent, "Karaoke", "Grip Your Toes to Dance", R.drawable.karaoke));

@@ -23,7 +23,7 @@ public class Quiz extends AppCompatActivity {
 
     String value;
     private List<cards> cardsList;
-    adaptermain adapter;
+    danceadapter adapter;
     TextView slide2HeadingTextView;
 
     @Override
@@ -78,7 +78,7 @@ public class Quiz extends AppCompatActivity {
         cardsList.add(new cards(R.color.colorAccent, "Business Quiz", "Grip Your Toes to Dance", R.drawable.businessquiz));
         cardsList.add(new cards(R.color.colorAccent, "General Quiz", "Grip Your Toes to Dance", R.drawable.generalquiz));
 
-        adapter = new adaptermain(Quiz.this, cardsList);
+        adapter = new danceadapter(Quiz.this, cardsList);
 
         recyclerView.setAdapter(adapter);
 

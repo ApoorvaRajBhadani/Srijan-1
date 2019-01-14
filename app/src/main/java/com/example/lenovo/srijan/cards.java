@@ -13,6 +13,11 @@ public class cards {
         this.titledesciption = titledesciption;
         this.logos = logos;
     }
+    public cards(int sidecolor, String titletext,  int logos) {
+        this.sidecolor = sidecolor;
+        this.titletext = titletext;
+        this.logos = logos;
+    }
 
     public int getSidecolor() {
         return sidecolor;
