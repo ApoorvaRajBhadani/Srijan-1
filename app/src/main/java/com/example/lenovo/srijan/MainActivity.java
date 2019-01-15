@@ -20,7 +20,7 @@ import android.widget.ImageView;
 @SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    ImageView nav,compition,informals;
+    ImageView nav,compition,informals,games,highlights;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         nav = (ImageView)findViewById(R.id.nav);
         compition = (ImageView)findViewById(R.id.competitions);
         informals = (ImageView)findViewById(R.id.informals);
+        games = (ImageView)findViewById(R.id.game);
+        highlights = (ImageView)findViewById(R.id.highlighgts);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationManager mNotificationManager =
                     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -54,6 +56,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,informals.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+                finish();
+            }
+        });
+        games.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Games.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+                finish();
+            }
+        });
+        highlights.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Highlights.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
                 finish();

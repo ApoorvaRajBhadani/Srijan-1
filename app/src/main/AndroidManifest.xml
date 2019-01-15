@@ -30,7 +30,7 @@
         <activity android:name=".Films" />
         <activity android:name=".Kavyanjali" />
         <activity android:name=".Quiz" />
-        <activity android:name=".Literary"></activity>
+        <activity android:name=".Literary" />
 
         <service android:name=".MyFirebaseInstanceIDService">
             <intent-filter>
@@ -42,6 +42,10 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <activity android:name=".Games" />
+        <activity android:name=".HIghlights" />
+        <activity android:name=".Highlights"></activity>
     </application>
 
 </manifest>
