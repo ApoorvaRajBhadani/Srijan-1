@@ -50,15 +50,14 @@ public class competition extends MainActivity {
         cardsList.add(new cards(R.color.card1, "Dance", "Grip Your Toes to Dance", R.drawable.footloose));
         cardsList.add(new cards(R.color.card2, "Musical", "...pending", R.drawable.footloose));
         cardsList.add(new cards(R.color.card3, "Dramatics", "...pending", R.drawable.footloose));
-        cardsList.add(new cards(R.color.card3, "Photography", "...pending", R.drawable.footloose));
-        cardsList.add(new cards(R.color.card3, "Fine Arts", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card1, "Photography", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card2, "Fine Arts", "...pending", R.drawable.footloose));
         cardsList.add(new cards(R.color.card3, "Films", "...pending", R.drawable.footloose));
-        cardsList.add(new cards(R.color.card3, "Kavyanjali", "...pending", R.drawable.footloose));
-        cardsList.add(new cards(R.color.card3, "Quiz", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card1, "Kavyanjali", "...pending", R.drawable.footloose));
+        cardsList.add(new cards(R.color.card2, "Quiz", "...pending", R.drawable.footloose));
         cardsList.add(new cards(R.color.card3, "Literary", "...pending", R.drawable.footloose));
         adapter = new adaptermain(competition.this, cardsList);
         recyclerView.setAdapter(adapter);
-
     }
 
     @Override

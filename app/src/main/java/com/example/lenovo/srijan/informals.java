@@ -21,7 +21,7 @@ import java.util.List;
 public class informals extends  MainActivity {
 
     private List<cards> cardsList;
-    adaptermain adapter;
+    danceadapter adapter;
     TextView slide1HeadingTextView;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -47,16 +47,17 @@ public class informals extends  MainActivity {
         cardsList = new ArrayList<>();
         //addimg items to list
         //yaha pr change titletext me jo me  naam dunga vo ayenge,drawable me image club name se save krna;
-        cardsList.add(new cards(R.color.card1, "Magic Mirrors", "Grip Your Toes to Dance", R.drawable.mirror));
-        cardsList.add(new cards(R.color.colorAccent, "Now you see me", "Grip Your Toes to Dance", R.drawable.talent));
-        cardsList.add(new cards(R.color.colorAccent, "Prom", "Grip Your Toes to Dance", R.drawable.prom));
-        cardsList.add(new cards(R.color.colorAccent, "Silent DJ", "Grip Your Toes to Dance", R.drawable.silentdj));
-        cardsList.add(new cards(R.color.colorAccent, "Karaoke", "Grip Your Toes to Dance", R.drawable.karaoke));
-        cardsList.add(new cards(R.color.colorAccent, "DJ Battle", "Grip Your Toes to Dance", R.drawable.djbattle));
-        cardsList.add(new cards(R.color.colorAccent, "Zorbing", "Grip Your Toes to Dance", R.drawable.zorbing));
-        cardsList.add(new cards(R.color.colorAccent, "Photo Booth", "Grip Your Toes to Dance", R.drawable.photobooth));
-        cardsList.add(new cards(R.color.colorAccent, "Movie Screening", "Grip Your Toes to Dance", R.drawable.photobooth));
-        adapter = new adaptermain(informals.this,cardsList);
+        cardsList.add(new cards(R.color.card1, "Magic Mirrors",  R.drawable.mirror));
+        cardsList.add(new cards(R.color.card2, "Now you see me",  R.drawable.talent));
+        cardsList.add(new cards(R.color.card3, "Prom",  R.drawable.prom));
+        cardsList.add(new cards(R.color.card1, "Silent DJ",  R.drawable.silentdj));
+        cardsList.add(new cards(R.color.card2, "Karaoke",  R.drawable.karaoke));
+        cardsList.add(new cards(R.color.card3, "DJ Battle",  R.drawable.djbattle));
+        cardsList.add(new cards(R.color.card1, "Zorbing",  R.drawable.zorbing));
+        cardsList.add(new cards(R.color.card2, "Photo Booth",  R.drawable.photobooth));
+        cardsList.add(new cards(R.color.card3, "Movie Screening",  R.drawable.photobooth));
+        adapter = new danceadapter(informals.this, cardsList);
+
         recyclerView.setAdapter(adapter);
 
     }

@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Kavyanjali extends AppCompatActivity {
 
-    String value;
+
     private List<cards> cardsList;
     danceadapter adapter;
     TextView slide2HeadingTextView;
@@ -30,9 +30,8 @@ public class Kavyanjali extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slide2);
-        //firebase setup;
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("dates");
+
+
 
         // recycler view
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler2);
@@ -51,7 +50,7 @@ public class Kavyanjali extends AppCompatActivity {
         //addimg items to list
         //R.color.card1,R.color.card2,R.color.card3;
         cardsList.add(new cards(R.color.card1, "Chai pe Charcha", R.drawable.chai));//yha pr salsa ki jagah event name or image bhi change krna
-        cardsList.add(new cards(R.color.colorAccent, "Kavyanjali", "Grip Your Toes to Dance", R.drawable.kavyanjali));
+        cardsList.add(new cards(R.color.card2, "Kavyanjali", R.drawable.kavyanjali));
         adapter = new danceadapter(Kavyanjali.this, cardsList);
 
         recyclerView.setAdapter(adapter);

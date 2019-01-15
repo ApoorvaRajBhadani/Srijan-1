@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Films extends AppCompatActivity {
 
-    String value;
+
     private List<cards> cardsList;
     danceadapter adapter;
     TextView slide2HeadingTextView;
@@ -30,9 +30,8 @@ public class Films extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slide2);
-        //firebase setup;
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("dates");
+
+
 
         // recycler view
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler2);
@@ -46,35 +45,12 @@ public class Films extends AppCompatActivity {
         cardsList = new ArrayList<>();
 
 
-        myRef.addValueEventListener(new ValueEventListener() {
-            private static final String TAG = "hello";
 
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                //String url;
-                //dataSnapshot = dataSnapshot.child("photos");
-                if (dataSnapshot.exists()) {
-                    String classname = getIntent().getStringExtra("actvityname");//firebase se dates ayegi
-                    value = dataSnapshot.child("salsa").getValue().toString();//yha salsa ki jagah event name likhna or firebase database me update krlena
-                    Log.d(TAG, "Value is: " + value);
-                } else {
-                    value = "updated soon";
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
 
         //addimg items to list
         //R.color.card1,R.color.card2,R.color.card3;
-        cardsList.add(new cards(R.color.card1, "24 hours Filmmaking Challenge", R.drawable.filmmaking24hrs));//yha pr salsa ki jagah event name or image bhi change krna
-        cardsList.add(new cards(R.color.colorAccent, "Workshop (IFP)", R.drawable.workshoplci));
+        cardsList.add(new cards(R.color.card1, "24 hours Filmmaking", R.drawable.filmmaking24hrs));//yha pr salsa ki jagah event name or image bhi change krna
+        cardsList.add(new cards(R.color.card2, "Workshop(IFP)",  R.drawable.workshoplci));
         adapter = new danceadapter(Films.this, cardsList);
 
         recyclerView.setAdapter(adapter);

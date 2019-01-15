@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class FineArts extends AppCompatActivity {
 
-    String value;
+
     private List<cards> cardsList;
     danceadapter adapter;
     TextView slide2HeadingTextView;
@@ -30,9 +30,8 @@ public class FineArts extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slide2);
-        //firebase setup;
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("dates");
+
+
 
         // recycler view
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler2);
@@ -50,10 +49,10 @@ public class FineArts extends AppCompatActivity {
 
         //addimg items to list
         //R.color.card1,R.color.card2,R.color.card3;
-        cardsList.add(new cards(R.color.card1, "Sketch the view",  R.drawable.facepaint));//yha pr salsa ki jagah event name or image bhi change krna
-        cardsList.add(new cards(R.color.colorAccent, "Face Painting",  R.drawable.facepaint));
-        cardsList.add(new cards(R.color.colorAccent, "T-shirt Painting",R.drawable.tshirtpainting));
-        cardsList.add(new cards(R.color.colorAccent, "Doodle making", R.drawable.doodle));
+        cardsList.add(new cards(R.color.card1, "Sketch the view",  R.drawable.scene));//yha pr salsa ki jagah event name or image bhi change krna
+        cardsList.add(new cards(R.color.card2, "Face Painting",  R.drawable.facepaint));
+        cardsList.add(new cards(R.color.card3, "T-shirt Painting",R.drawable.tshirtpainting));
+        cardsList.add(new cards(R.color.card1, "Doodle making", R.drawable.doodle));
         adapter = new danceadapter(FineArts.this, cardsList);
 
         recyclerView.setAdapter(adapter);
@@ -65,4 +64,3 @@ public class FineArts extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_out_out,R.anim.slide_in_in);
     }
 }
-

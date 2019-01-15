@@ -50,9 +50,9 @@ public class dance extends AppCompatActivity {
         //addimg items to list
         //R.color.card1,R.color.card2,R.color.card3;
         cardsList.add(new cards(R.color.card1, "Footloose", R.drawable.footloose));//yha pr salsa ki jagah event name or image bhi change krna
-        cardsList.add(new cards(R.color.colorAccent, "Reflection",  R.drawable.reflection));
-        cardsList.add(new cards(R.color.colorAccent, "Streetbeats",  R.drawable.streetbeats));
-        cardsList.add(new cards(R.color.colorAccent, "Hustle herd",  R.drawable.hustleherd));
+        cardsList.add(new cards(R.color.card2, "Reflection",  R.drawable.reflection));
+        cardsList.add(new cards(R.color.card3, "Streetbeats",  R.drawable.streetbeats));
+        cardsList.add(new cards(R.color.card1, "Hustle herd",  R.drawable.hustleherd));
         adapter = new danceadapter(dance.this, cardsList);
 
         recyclerView.setAdapter(adapter);
