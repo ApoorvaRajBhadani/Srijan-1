@@ -17,7 +17,7 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-@SuppressWarnings("ALL")
+
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView nav,compition,informals,games,highlights;

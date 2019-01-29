@@ -15,13 +15,13 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".competition" />
         <activity android:name=".dance" />
-        <activity android:name=".salsa" />
+        <activity android:name=".salsa"></activity>
+
         <activity android:name=".informals" />
         <activity android:name=".Musical" />
         <activity android:name=".Dramatics" />
@@ -44,8 +44,9 @@
         </service>
 
         <activity android:name=".Games" />
-        <activity android:name=".HIghlights" />
+
         <activity android:name=".Highlights"></activity>
+        <activity android:name="Details"></activity>
     </application>
 
 </manifest>

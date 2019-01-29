@@ -174,16 +174,7 @@ import java.util.List;
 
 
                         }
-                        if(cards1.getTitletext().equals("Salsa")){
 
-                            Intent intent = new Intent(mctx,salsa.class);
-                            intent.putExtra("actvityname",cards1.getTitletext());
-                            mctx.startActivity(intent);
-                            if(mctx instanceof dance)
-                                ((dance) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
-
-
-                        }
                     }
                 });
 

@@ -85,6 +85,25 @@ public class danceadapter extends RecyclerView.Adapter<danceadapter.danceadapter
             logoimage = itemView.findViewById(R.id.logo);
             titletext = itemView.findViewById(R.id.headtext);
             textdesc = itemView.findViewById(R.id.desc);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                AppCompatActivity appCompatActivity;
+                @Override
+                public void onClick(View v) {
+                    cards cards = cardlist.get(getAdapterPosition());
+
+
+                    if(cards.getTitletext().equals("Footloose")){
+                        Intent intent = new Intent(mctx,salsa.class);
+                        mctx.startActivity(intent);
+                        if(mctx instanceof dance)//yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((dance) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+
+
+                }
+            });
         }
     }
 }
