@@ -28,7 +28,7 @@ public class competition extends MainActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.replaceContentLayout(R.layout.slide1, R.id.main);
+        super.replaceContentLayout(R.layout.new_slide1, R.id.main);
         final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ImageView imageView = (ImageView) findViewById(R.id.nav);
         slide1HeadingTextView = (TextView) findViewById(R.id.slide1_heading_textView);

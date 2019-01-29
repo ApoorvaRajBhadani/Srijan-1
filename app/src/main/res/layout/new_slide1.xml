@@ -20,17 +20,18 @@
             android:text="Competition"
             android:textColor="#ffffff"
             android:textAllCaps="true"/>
-        <Button
+        <ImageView
             android:id="@+id/nav"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:background="@mipmap/nav"/>
     </RelativeLayout>
-    <view class="android.support.v7.app.AlertController$RecycleListView"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5">
 
-    </view>
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
