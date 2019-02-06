@@ -44,15 +44,14 @@
         <activity android:name=".Monoact" />
         <activity android:name=".Snappers" />
         <activity android:name=".CreativeCanvas" />
+        <activity android:name=".Hallabol" />
+
+        <activity android:name=".ChaiPeCharcha" />
         <activity android:name=".SketchTheView" />
         <activity android:name=".FacePainting" />
         <activity android:name=".TshirtPainting" />
         <activity android:name=".DoodleMaking" />
-        <activity android:name=".Filmmaking" />
-        <activity android:name=".Workshop" />
-        <activity android:name=".Hallabol" />
-
-
+        <activity android:name=".KavyanjaliEvent" />
         <activity android:name=".PopQuiz" />
         <activity android:name=".SportsQuiz" />
         <activity android:name=".BusinessQuiz" />
@@ -60,6 +59,8 @@
         <activity android:name=".Standup" />
         <activity android:name=".Trichonia" />
         <activity android:name=".HeadOn" />
+        <activity android:name=".Filmmaking" />
+        <activity android:name=".Workshop" />
 
 
         <service android:name=".MyFirebaseInstanceIDService">

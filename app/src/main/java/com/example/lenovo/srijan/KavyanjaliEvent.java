@@ -33,7 +33,7 @@ import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class FacePainting extends AppCompatActivity {
+public class KavyanjaliEvent extends AppCompatActivity {
 
     ViewPager viewPager;
     Button button;
@@ -58,7 +58,7 @@ public class FacePainting extends AppCompatActivity {
         init();
         final TextView headingTextView = (TextView)findViewById(R.id.slide3_heading_textView);
         //todo: change heading text
-        headingTextView.setText("Pair On Stage");
+        headingTextView.setText("Kavyanjali");
         notification();
         place();
         details();
@@ -71,15 +71,15 @@ public class FacePainting extends AppCompatActivity {
             public void onClick(View v) {
                 if(!sharedPreferenceConfig.getstatus()){
                     //todo:set context
-                    Toast.makeText(FacePainting.this,"Unsubscribed from event's notifications",Toast.LENGTH_LONG).show();
+                    Toast.makeText(KavyanjaliEvent.this,"Unsubscribed from event's notifications",Toast.LENGTH_LONG).show();
                     imageView.setImageResource(R.drawable.bell);
-                    FirebaseMessaging.getInstance().unsubscribeFromTopic("FacePainting");//Todo:event name
+                    FirebaseMessaging.getInstance().unsubscribeFromTopic("KavyanjaliEvent");//Todo:event name
                     sharedPreferenceConfig.writeImagestatus(true);
                 }else{
 
-                    FirebaseMessaging.getInstance().subscribeToTopic("Unplugged");//Todo:event name
+                    FirebaseMessaging.getInstance().subscribeToTopic("KavyanjaliEvent");//Todo:event name
                     //todo:set context
-                    Toast.makeText(FacePainting.this,"Successfully subscribed for notifications",Toast.LENGTH_LONG).show();
+                    Toast.makeText(KavyanjaliEvent.this,"Successfully subscribed for notifications",Toast.LENGTH_LONG).show();
                     sharedPreferenceConfig.writeImagestatus(false);
                     imageView.setImageResource(R.drawable.chess);
                 }
@@ -102,9 +102,9 @@ public class FacePainting extends AppCompatActivity {
         final DatabaseReference ref= FirebaseDatabase.getInstance().getReference("details");
         final String[] details = new String[1];
         //todo:set context
-        final Intent intent = new Intent(FacePainting.this,Details.class);
+        final Intent intent = new Intent(KavyanjaliEvent.this,Details.class);
         //todo:set context
-        Dialog = new ProgressDialog(FacePainting.this);
+        Dialog = new ProgressDialog(KavyanjaliEvent.this);
         Dialog.setMessage("Downloading....");
         Dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         Dialog.setIndeterminate(true);
@@ -115,7 +115,7 @@ public class FacePainting extends AppCompatActivity {
                 Dialog.show();
                 //event name
                 //todo:set firebase details
-                ref.child("PairOnStage").addValueEventListener(new ValueEventListener() {
+                ref.child("KavyanjaliEvent").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
@@ -140,11 +140,11 @@ public class FacePainting extends AppCompatActivity {
         final DatabaseReference ref= FirebaseDatabase.getInstance().getReference("places");
         final String[] places = new String[1];
         //todo:set context
-        placess = new AlertDialog.Builder(FacePainting.this);//class ka name
+        placess = new AlertDialog.Builder(KavyanjaliEvent.this);//class ka name
         placess.setTitle("Venue");
         placess.create();
         //todo:set context
-        progressDialog = new ProgressDialog(FacePainting.this);
+        progressDialog = new ProgressDialog(KavyanjaliEvent.this);
         progressDialog.setMessage("Wait");
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setIndeterminate(true);
@@ -164,7 +164,7 @@ public class FacePainting extends AppCompatActivity {
                 progressDialog.show();
                 //child me event ka name;
                 //todo:set venue firebase
-                ref.child("PairOnStage").addValueEventListener(new ValueEventListener() {
+                ref.child("KavyanjaliEvent").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
@@ -194,7 +194,7 @@ public class FacePainting extends AppCompatActivity {
     private void init() {
         viewPager = (ViewPager)findViewById(R.id.viewPager);
         //todo:set context
-        viewPager.setAdapter(new adapterimage(FacePainting.this,imagesList));
+        viewPager.setAdapter(new adapterimage(KavyanjaliEvent.this,imagesList));
         CircleIndicator circleIndicator = (CircleIndicator)findViewById(R.id.indicator);
         circleIndicator.setViewPager(viewPager);
 
