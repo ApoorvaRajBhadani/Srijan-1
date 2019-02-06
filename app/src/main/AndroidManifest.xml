@@ -32,6 +32,36 @@
         <activity android:name=".Quiz" />
         <activity android:name=".Literary" />
 
+        <activity android:name=".Footloose" />
+        <activity android:name=".Reflection" />
+        <activity android:name=".Streetbeats" />
+        <activity android:name=".HustleHerd" />
+        <activity android:name=".Aaroh" />
+        <activity android:name=".Unplugged" />
+        <activity android:name=".PairOnStage" />
+
+        <activity android:name=".Rangmanch" />
+        <activity android:name=".Monoact" />
+        <activity android:name=".Snappers" />
+        <activity android:name=".CreativeCanvas" />
+        <activity android:name=".SketchTheView" />
+        <activity android:name=".FacePainting" />
+        <activity android:name=".TshirtPainting" />
+        <activity android:name=".DoodleMaking" />
+        <activity android:name=".Filmmaking" />
+        <activity android:name=".Workshop" />
+        <activity android:name=".Hallabol" />
+
+
+        <activity android:name=".PopQuiz" />
+        <activity android:name=".SportsQuiz" />
+        <activity android:name=".BusinessQuiz" />
+        <activity android:name=".GeneralQuiz" />
+        <activity android:name=".Standup" />
+        <activity android:name=".Trichonia" />
+        <activity android:name=".HeadOn" />
+
+
         <service android:name=".MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
