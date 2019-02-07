@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (id) {
                     case R.id.nav_camera:
                         Toast.makeText(MainActivity.this, "My Account", Toast.LENGTH_SHORT).show();
+
                     case R.id.nav_gallery:
                         Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                     case R.id.nav_slideshow:

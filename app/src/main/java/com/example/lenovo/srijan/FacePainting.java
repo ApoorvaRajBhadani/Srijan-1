@@ -58,7 +58,7 @@ public class FacePainting extends AppCompatActivity {
         init();
         final TextView headingTextView = (TextView)findViewById(R.id.slide3_heading_textView);
         //todo: change heading text
-        headingTextView.setText("Pair On Stage");
+        headingTextView.setText("Face Painting");
         notification();
         place();
         details();
@@ -87,14 +87,6 @@ public class FacePainting extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
-
-
-
     }
 
     private void details() {
