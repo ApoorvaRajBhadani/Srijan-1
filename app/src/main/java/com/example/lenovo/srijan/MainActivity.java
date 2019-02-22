@@ -1,9 +1,13 @@
 package com.example.lenovo.srijan;
 
+import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -24,7 +28,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    ImageView nav, compition, informals, games, highlights;
+    ImageView nav, compition, informals, games, highlights,youtube,facebook,website,instagram;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
         informals = (ImageView) findViewById(R.id.informals);
         games = (ImageView) findViewById(R.id.game);
         highlights = (ImageView) findViewById(R.id.highlighgts);
+        youtube = (ImageView)findViewById(R.id.youtube);
+        facebook = (ImageView)findViewById(R.id.facebook);
+        website = (ImageView)findViewById(R.id.website);
+        instagram = (ImageView)findViewById(R.id.instagram);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationManager mNotificationManager =
                     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -82,6 +90,81 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 finish();
+            }
+        });
+        youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.youtube.com/channel/UCEHz9YW5mhXIc0Yn1kNgjoA");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                likeIng.setPackage("com.google.android.youtube");
+
+                try {
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://www.youtube.com/channel/UCEHz9YW5mhXIc0Yn1kNgjoA")));
+                }
+            }
+
+        });
+        website.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              /*  String url = "http://srijaniitism.org/";
+                try {
+                    Intent i = new Intent("android.intent.action.MAIN");
+                    i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
+                    i.addCategory("android.intent.category.LAUNCHER");
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                catch(ActivityNotFoundException e) {
+                    // Chrome is not installed
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(i);
+                }*/
+
+                Uri uri = Uri.parse("googlechrome://navigate?url=" + "http://srijaniitism.org/");
+                Intent i = new Intent(Intent.ACTION_VIEW, uri);
+                i.setPackage("com.android.chrome");
+                startActivity(i);
+            }
+        });
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                    Uri uri = Uri.parse("http://facebook.com/ism.srijan");
+                    Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                likeIng.setPackage("com.facebook.katana");
+
+
+                try {
+                        startActivity(likeIng);
+                    } catch (ActivityNotFoundException e) {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("http://facebook.com/ism.srijan")));
+                    }
+                }
+
+        });
+        instagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://instagram.com/srijaniitism?utm_source=ig_profile_share&igshid=1l1y5t12a3wcd");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                likeIng.setPackage("com.instagram.android");
+
+                try {
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://instagram.com/srijaniitism?utm_source=ig_profile_share&igshid=1l1y5t12a3wcd")));
+                }
             }
         });
         nav.setOnClickListener(new View.OnClickListener() {

@@ -9,5 +9,6 @@
     <color name="card3">#ff007e</color>
     <color name="cardbg">#251830</color>
     <color name="text1">#c7b7d2</color>
+    <color name="white">#ffffff</color>
 
 </resources>

@@ -13,20 +13,20 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="179dp"
-        android:layout_height="169dp"
+        android:layout_width="216dp"
+        android:layout_height="214dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
 
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/days" />
+        app:srcCompat="@drawable/logosrijan" />
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
@@ -34,13 +34,12 @@
         android:layout_height="307dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintBottom_toTopOf="@+id/website"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -89,7 +88,7 @@
     </android.support.v4.widget.NestedScrollView>
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/facebook"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="28dp"
@@ -100,29 +99,29 @@
         app:srcCompat="@mipmap/fb" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/instagram"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/facebook"
         app:srcCompat="@mipmap/insta" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/website"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/instagram"
         app:srcCompat="@mipmap/web" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/youtube"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="28dp"
@@ -132,7 +131,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toEndOf="@+id/website"
         app:srcCompat="@mipmap/you" />
 
     <ImageView
