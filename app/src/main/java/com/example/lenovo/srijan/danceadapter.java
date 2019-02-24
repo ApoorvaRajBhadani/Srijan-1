@@ -309,6 +309,150 @@ public class danceadapter extends RecyclerView.Adapter<danceadapter.danceadapter
                             ((Photography) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
 
                     }
+                    if(cards.getTitletext().equals("Campus Princess")){
+                        Intent intent = new Intent(mctx, CampusPrincess.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof Highlights)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((Highlights) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Paridhan")){
+                        Intent intent = new Intent(mctx, Paridhan.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof Highlights)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((Highlights) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Avalanche")){
+                        Intent intent = new Intent(mctx, Avalanche.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof Highlights)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((Highlights) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Magic Mirrors")){
+                        Intent intent = new Intent(mctx, MagicMirrors.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof informals)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((informals) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Now you see me")){
+                        Intent intent = new Intent(mctx, NowYouSeeMe.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof informals)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((informals) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Prom")){
+                        Intent intent = new Intent(mctx, Prom.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof informals)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((informals) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Silent DJ")){
+                        Intent intent = new Intent(mctx, SilentDJ.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof informals)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((informals) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Karaoke")){
+                        Intent intent = new Intent(mctx, Karaoke.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof informals)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((informals) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("DJ Battle")){
+                        Intent intent = new Intent(mctx, DJBattle.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof informals)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((informals) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Zorbing")){
+                        Intent intent = new Intent(mctx, Zorbing.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof informals)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((informals) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Photo Booth")){
+                        Intent intent = new Intent(mctx, PhotoBooth.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof informals)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((informals) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Movie Screening")){
+                        Intent intent = new Intent(mctx, MovieScreening.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof informals)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((informals) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Chess")){
+                        Intent intent = new Intent(mctx, Chess.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof Games)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((Games) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Paintball")){
+                        Intent intent = new Intent(mctx, Paintball.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof Games)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((Games) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("Snooker")){
+                        Intent intent = new Intent(mctx, Snooker.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof Games)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((Games) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("CS GO")){
+                        Intent intent = new Intent(mctx, CSGO.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof Games)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((Games) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("FIFA 19")){
+                        Intent intent = new Intent(mctx, FIFA19.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof Games)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((Games) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
+                    if(cards.getTitletext().equals("PUBG")){
+                        Intent intent = new Intent(mctx, PUBG.class);//todo:change to class
+                        mctx.startActivity(intent);
+                        if(mctx instanceof Games)//todo:yha pr dance ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                            ((Games) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+                    }
                 }
             });
         }

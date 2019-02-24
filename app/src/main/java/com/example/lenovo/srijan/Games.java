@@ -20,17 +20,17 @@ public class Games extends  MainActivity {
 
     private List<cards> cardsList;
     danceadapter adapter;
-    TextView slide1HeadingTextView;
+    TextView slide2HeadingTextView;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.replaceContentLayout(R.layout.slide1, R.id.main);
+        super.replaceContentLayout(R.layout.new_slide2, R.id.main);
         final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ImageView imageView = (ImageView) findViewById(R.id.nav);
-        slide1HeadingTextView = (TextView)findViewById(R.id.slide1_heading_textView);
-        slide1HeadingTextView.setText("GAMES");
+        ImageView imageView = (ImageView) findViewById(R.id.imageView2);
+        slide2HeadingTextView = (TextView)findViewById(R.id.slide2_heading_textView);
+        slide2HeadingTextView.setText("GAMES");
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +38,7 @@ public class Games extends  MainActivity {
             }
         });
         // recycler view
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 

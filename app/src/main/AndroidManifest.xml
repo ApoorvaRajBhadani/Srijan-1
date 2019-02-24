@@ -61,6 +61,29 @@
         <activity android:name=".HeadOn" />
         <activity android:name=".Filmmaking" />
         <activity android:name=".Workshop" />
+        <activity android:name=".Paridhan" />
+        <activity android:name=".Avalanche" />
+        <activity android:name=".CampusPrincess" />
+
+        <activity android:name=".NowYouSeeMe" />
+        <activity android:name=".MagicMirrors" />
+        <activity android:name=".Prom" />
+        <activity android:name=".SilentDJ" />
+        <activity android:name=".Karaoke" />
+        <activity android:name=".DJBattle" />
+        <activity android:name=".Zorbing" />
+        <activity android:name=".PhotoBooth" />
+        <activity android:name=".MovieScreening" />
+
+        <activity android:name=".Chess" />
+        <activity android:name=".CSGO" />
+        <activity android:name=".PUBG" />
+        <activity android:name=".FIFA19" />
+        <activity android:name=".Snooker" />
+        <activity android:name=".Paintball" />
+
+
+
 
 
         <service android:name=".MyFirebaseInstanceIDService">
