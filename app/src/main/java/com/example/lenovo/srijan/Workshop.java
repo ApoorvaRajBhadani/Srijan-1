@@ -1,8 +1,13 @@
 package com.example.lenovo.srijan;
 
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -36,7 +41,7 @@ import me.relex.circleindicator.CircleIndicator;
 public class Workshop extends AppCompatActivity {
 
     ViewPager viewPager;
-    Button button;
+    Button button,regis;//
     List<String> imagesList;
     AlertDialog.Builder placess;
     ProgressDialog progressDialog;
@@ -44,6 +49,8 @@ public class Workshop extends AppCompatActivity {
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     SharedPreferenceConfig sharedPreferenceConfig;
+    boolean   connected = false;//new line
+    ConnectivityManager connectivityManager;//new line
 
     //todo: photos url from firebase
     String[] photos = {"https://firebasestorage.googleapis.com/v0/b/srijan-6df05.appspot.com/o/photos%2Fimg1.jpg?alt=media&token=1082e395-1e4c-4579-a1b8-0bdbb21b9b3b","https://firebasestorage.googleapis.com/v0/b/srijan-6df05.appspot.com/o/photos%2Fimhg2.jpg?alt=media&token=5ee1f8b1-8bef-4049-aebe-86dbe76fd334"};
@@ -61,14 +68,21 @@ public class Workshop extends AppCompatActivity {
         headingTextView.setText("Workshop -  IFP");
         notification();
         place();
-        details();
+        details();register();
         sharedPreferenceConfig = new SharedPreferenceConfig(getApplicationContext());
         final ImageView imageView = (ImageView)findViewById(R.id.notification);
 
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                    connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+                //we are connected to a network
+                connected = true;
+            }
+            else
+                connected = false;
+                if(connected){
                 if(!sharedPreferenceConfig.getstatus()){
                     //todo:set context
                     Toast.makeText(Workshop.this,"Unsubscribed from event's notifications",Toast.LENGTH_LONG).show();
@@ -84,7 +98,9 @@ public class Workshop extends AppCompatActivity {
                     imageView.setImageResource(R.drawable.chess);
                 }
 
-
+                }else{
+                    Toast.makeText(Workshop.this,"Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -96,7 +112,26 @@ public class Workshop extends AppCompatActivity {
 
 
     }
+    private void register() {
+        Button register = (Button)findViewById(R.id.register);
 
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://srijaniitism.org/register");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                likeIng.setPackage("com.instagram.android");
+
+                try {
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://srijaniitism.org/register")));
+                }
+            }
+        });
+    }
     private void details() {
         button = (Button)findViewById(R.id.detailsss);
         final DatabaseReference ref= FirebaseDatabase.getInstance().getReference("details");
@@ -112,6 +147,15 @@ public class Workshop extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                        connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+                    //we are connected to a network
+                    connected = true;
+                }
+                else
+                    connected = false;
+                if(connected){
+
                 Dialog.show();
                 //event name
                 //todo:set firebase details
@@ -130,7 +174,9 @@ public class Workshop extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
-                });
+                });}else{
+                    Toast.makeText(Workshop.this,"Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -161,6 +207,15 @@ public class Workshop extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                        connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+                    //we are connected to a network
+                    connected = true;
+                }
+                else
+                    connected = false;
+                if(connected){
+
                 progressDialog.show();
                 //child me event ka name;
                 //todo:set venue firebase
@@ -182,7 +237,9 @@ public class Workshop extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
-                });
+                });}else{
+                    Toast.makeText(Workshop.this,"Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -197,6 +254,8 @@ public class Workshop extends AppCompatActivity {
         viewPager.setAdapter(new adapterimage(Workshop.this,imagesList));
         CircleIndicator circleIndicator = (CircleIndicator)findViewById(R.id.indicator);
         circleIndicator.setViewPager(viewPager);
+        connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);//new line
+
 
         //final float density = getResources().getDisplayMetrics().density;
 
