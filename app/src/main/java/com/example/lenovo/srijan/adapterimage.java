@@ -34,7 +34,7 @@ public class adapterimage extends PagerAdapter {
         LayoutInflater inflater = (LayoutInflater)mtcx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.slidingimages,null);
         ImageView imageView = (ImageView)view.findViewById(R.id.image);
-        Picasso.get().load(images).placeholder(R.drawable.slide1).fit().into(imageView);
+        Picasso.get().load(images).placeholder(R.drawable.logosrijan).fit().into(imageView);
         ViewPager viewPager = (ViewPager) container;
         viewPager.addView(view, 0);
 
