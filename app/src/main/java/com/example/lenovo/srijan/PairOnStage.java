@@ -12,11 +12,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -30,7 +28,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
-import java.sql.Ref;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
@@ -99,7 +96,7 @@ public class PairOnStage extends AppCompatActivity {
                     //todo:set context
                     Toast.makeText(PairOnStage.this,"Successfully subscribed for notifications",Toast.LENGTH_LONG).show();
                     sharedPreferenceConfig.writeImagestatus(false);
-                    imageView.setImageResource(R.drawable.chess);
+                    imageView.setImageResource(R.drawable.belloff);
                 }
                 }else{
                     Toast.makeText(PairOnStage.this,"Please Check Your Internet Connection", Toast.LENGTH_LONG).show();

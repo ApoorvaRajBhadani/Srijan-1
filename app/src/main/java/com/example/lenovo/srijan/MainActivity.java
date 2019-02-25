@@ -28,18 +28,19 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    ImageView nav, compition, informals, games, highlights,youtube,facebook,website,instagram;
+    ImageView nav, compition, informals, games, highlights,youtube,facebook,website,instagram,starattraction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        configureNavigationDrawer();
+        configureNavigationDrawer();//copy this line
         drawerLayout = findViewById(R.id.drawer_layout);
         nav = (ImageView) findViewById(R.id.nav);
         compition = (ImageView) findViewById(R.id.competitions);
         informals = (ImageView) findViewById(R.id.informals);
         games = (ImageView) findViewById(R.id.game);
+        starattraction = (ImageView)findViewById(R.id.star);
         highlights = (ImageView) findViewById(R.id.highlighgts);
         youtube = (ImageView)findViewById(R.id.youtube);
         facebook = (ImageView)findViewById(R.id.facebook);
@@ -150,6 +151,19 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
+        });
+        starattraction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(InternetConnection.checkConnection(MainActivity.this)){
+                    Intent intent = new Intent(MainActivity.this,NewsFeed.class);
+                    startActivity(intent);
+                }
+
+                else{
+                    Toast.makeText(MainActivity.this,"Please Check Your Internet Connection",Toast.LENGTH_LONG).show();
+                }
+            }
         });
         instagram.setOnClickListener(new View.OnClickListener() {
             @Override

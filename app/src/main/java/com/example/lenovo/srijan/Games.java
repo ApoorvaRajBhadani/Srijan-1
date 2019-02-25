@@ -5,7 +5,6 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -45,7 +44,7 @@ public class Games extends  MainActivity {
         cardsList = new ArrayList<>();
         //addimg items to list
         //yaha pr change titletext me jo me  naam dunga vo ayenge,drawable me image club name se save krna;
-        cardsList.add(new cards(R.color.card1, "Chess",  R.drawable.chess));
+        cardsList.add(new cards(R.color.card1, "Chess",  R.drawable.belloff));
         cardsList.add(new cards(R.color.card2, "Paintball",  R.drawable.paintball));
         cardsList.add(new cards(R.color.card3, "Snooker",  R.drawable.snooker));
         cardsList.add(new cards(R.color.card1, "CS GO",  R.drawable.csgo));

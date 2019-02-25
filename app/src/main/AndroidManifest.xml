@@ -18,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NewsFeed"></activity>
         <activity android:name=".competition" />
         <activity android:name=".dance" />
         <activity android:name=".salsa"></activity>
