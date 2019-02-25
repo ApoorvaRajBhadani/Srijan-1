@@ -50,7 +50,7 @@ public class Musical extends AppCompatActivity {
         //addimg items to list
         //R.color.card1,R.color.card2,R.color.card3;
         cardsList.add(new cards(R.color.card1, "Aaroh", R.drawable.solosinging));//yha pr salsa ki jagah event name or image bhi change krna
-        cardsList.add(new cards(R.color.card2, "Unplugged",  R.drawable.band));
+        cardsList.add(new cards(R.color.card2, "Harmony",  R.drawable.ic_launcher_background));
         cardsList.add(new cards(R.color.card3, "Pair on Stage", R.drawable.paironstage));
         adapter = new danceadapter(Musical.this, cardsList);
 

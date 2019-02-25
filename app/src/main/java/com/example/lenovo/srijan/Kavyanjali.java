@@ -51,6 +51,7 @@ public class Kavyanjali extends AppCompatActivity {
         //R.color.card1,R.color.card2,R.color.card3;
         cardsList.add(new cards(R.color.card1, "Chai pe Charcha", R.drawable.chai));//yha pr salsa ki jagah event name or image bhi change krna
         cardsList.add(new cards(R.color.card2, "Kavyanjali", R.drawable.kavyanjali));
+        cardsList.add(new cards(R.color.card3, "Kavi Sammelan", R.drawable.ic_launcher_foreground));
         adapter = new danceadapter(Kavyanjali.this, cardsList);
 
         recyclerView.setAdapter(adapter);

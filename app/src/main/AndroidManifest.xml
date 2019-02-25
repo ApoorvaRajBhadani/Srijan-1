@@ -81,6 +81,11 @@
         <activity android:name=".FIFA19" />
         <activity android:name=".Snooker" />
         <activity android:name=".Paintball" />
+        <activity android:name=".KaviSammelan" />
+        <activity android:name=".OperationCampaign" />
+        <activity android:name=".PoetrySlam" />
+        <activity android:name=".Fanfic" />
+        <activity android:name=".Harmony" />
 
 
 

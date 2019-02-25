@@ -50,8 +50,13 @@ public class Literary extends AppCompatActivity {
         //addimg items to list
         //R.color.card1,R.color.card2,R.color.card3;
         cardsList.add(new cards(R.color.card1, "Standup", R.drawable.standup));//yha pr salsa ki jagah event name or image bhi change krna
-        cardsList.add(new cards(R.color.card2, "Trichonia",  R.drawable.trichonia));
-        cardsList.add(new cards(R.color.card3, "Head on",  R.drawable.heattoheat));
+//        cardsList.add(new cards(R.color.card2, "Trichonia",  R.drawable.trichonia));
+        cardsList.add(new cards(R.color.card2, "Head on",  R.drawable.heattoheat));
+        cardsList.add(new cards(R.color.card3, "Fanfic",  R.drawable.ic_launcher_background));
+        cardsList.add(new cards(R.color.card1, "Operation Campaign",  R.drawable.ic_launcher_background));
+        cardsList.add(new cards(R.color.card2, "Poetry Slam",  R.drawable.ic_launcher_background));
+
+
         adapter = new danceadapter(Literary.this, cardsList);
 
         recyclerView.setAdapter(adapter);
