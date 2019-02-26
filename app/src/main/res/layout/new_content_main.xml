@@ -23,7 +23,7 @@
             android:background="@mipmap/nav" />
         <ImageView
             android:layout_width="50dp"
-            android:id="@+id/bell"
+            android:id="@+id/bell1"
             android:layout_height="47dp"
             android:src="@drawable/bell1"
             android:layout_alignParentTop="true"

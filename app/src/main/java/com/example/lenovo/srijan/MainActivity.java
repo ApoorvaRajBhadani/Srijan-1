@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         facebook = (ImageView)findViewById(R.id.facebook);
         website = (ImageView)findViewById(R.id.website);
         instagram = (ImageView)findViewById(R.id.instagram);
-        ImageView bell = (ImageView) findViewById(R.id.bell);
+        ImageView bell = (ImageView) findViewById(R.id.bell1);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationManager mNotificationManager =
                     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
