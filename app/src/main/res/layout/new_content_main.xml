@@ -22,6 +22,13 @@
             android:layout_marginTop="16dp"
             android:background="@mipmap/nav" />
         <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/bell"
+            android:layout_height="47dp"
+            android:src="@drawable/bell1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+        <ImageView
             android:layout_width="wrap_content"
             android:id="@+id/imageView"
             android:layout_below="@+id/nav"

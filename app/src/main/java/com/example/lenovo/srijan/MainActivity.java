@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         facebook = (ImageView)findViewById(R.id.facebook);
         website = (ImageView)findViewById(R.id.website);
         instagram = (ImageView)findViewById(R.id.instagram);
+        ImageView bell = (ImageView) findViewById(R.id.bell);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationManager mNotificationManager =
                     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -187,11 +188,17 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+        bell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (InternetConnection.checkConnection(MainActivity.this)) {
+                    Intent intent = new Intent(MainActivity.this, NewsFeed.class);
+                    startActivity(intent);
+                }
 
 
-
-
-
+            }
+        })    ;
     }
 
     private void configureNavigationDrawer() {
