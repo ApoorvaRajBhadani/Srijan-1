@@ -22,9 +22,11 @@
             android:layout_marginTop="16dp"
             android:background="@mipmap/nav" />
         <ImageView
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:id="@+id/bell1"
-            android:layout_height="47dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:layout_height="35dp"
             android:src="@drawable/bell1"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"/>

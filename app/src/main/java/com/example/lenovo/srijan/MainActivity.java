@@ -1,25 +1,19 @@
 package com.example.lenovo.srijan;
 
-import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -28,7 +22,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    ImageView nav, compition, informals, games, highlights,youtube,facebook,website,instagram,starattraction;
+    ImageView nav, compition, informals, games, highlights, youtube, facebook, website, instagram, starattraction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
         compition = (ImageView) findViewById(R.id.competitions);
         informals = (ImageView) findViewById(R.id.informals);
         games = (ImageView) findViewById(R.id.game);
-        starattraction = (ImageView)findViewById(R.id.star);
+        starattraction = (ImageView) findViewById(R.id.star);
         highlights = (ImageView) findViewById(R.id.highlighgts);
-        youtube = (ImageView)findViewById(R.id.youtube);
-        facebook = (ImageView)findViewById(R.id.facebook);
-        website = (ImageView)findViewById(R.id.website);
-        instagram = (ImageView)findViewById(R.id.instagram);
+        youtube = (ImageView) findViewById(R.id.youtube);
+        facebook = (ImageView) findViewById(R.id.facebook);
+        website = (ImageView) findViewById(R.id.website);
+        instagram = (ImageView) findViewById(R.id.instagram);
         ImageView bell = (ImageView) findViewById(R.id.bell1);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationManager mNotificationManager =
@@ -138,31 +132,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                    Uri uri = Uri.parse("http://facebook.com/ism.srijan");
-                    Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+                Uri uri = Uri.parse("http://facebook.com/ism.srijan");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
 
                 likeIng.setPackage("com.facebook.katana");
 
 
                 try {
-                        startActivity(likeIng);
-                    } catch (ActivityNotFoundException e) {
-                        startActivity(new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("http://facebook.com/ism.srijan")));
-                    }
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("http://facebook.com/ism.srijan")));
                 }
+            }
 
         });
         starattraction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(InternetConnection.checkConnection(MainActivity.this)){
-                    Intent intent = new Intent(MainActivity.this,NewsFeed.class);
+                if (InternetConnection.checkConnection(MainActivity.this)) {
+                    Intent intent = new Intent(MainActivity.this, NewsFeed.class);
                     startActivity(intent);
-                }
-
-                else{
-                    Toast.makeText(MainActivity.this,"Please Check Your Internet Connection",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -198,30 +190,35 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
-        })    ;
+        });
     }
 
     private void configureNavigationDrawer() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 switch (id) {
                     case R.id.nav_home:
-                       startActivity(new Intent(MainActivity.this,MainActivity.class));
-
+                        startActivity(new Intent(MainActivity.this, MainActivity.class));
+                        break;
                     case R.id.nav_about:
-                        startActivity(new Intent(MainActivity.this,aboutus.class));
+                        startActivity(new Intent(MainActivity.this, AboutUsClass.class));
+                        break;
                     case R.id.nav_contact:
-                        startActivity(new Intent(MainActivity.this,aboutus.class));
+                        startActivity(new Intent(MainActivity.this, AboutUsClass.class));
+                        break;
                     case R.id.nav_develops:
-                        startActivity(new Intent(MainActivity.this,Developers.class));
+                        startActivity(new Intent(MainActivity.this, Developers.class));
+                        break;
                     default:
                         return true;
+
                 }
+                return true;
             }
         });
         drawer.addDrawerListener(toggle);

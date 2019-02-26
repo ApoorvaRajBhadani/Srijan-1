@@ -62,14 +62,9 @@ public class DeveloperAdapter extends BaseAdapter {
             public void onClick(View v) {
 
                 String url = model.getLinkedinUrl();
-                try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("linkedin://profile/" + url));
-                    intent.setPackage("com.linkedin.android");
-                    context.startActivity(intent);
-                } catch (ActivityNotFoundException anfe) {
                     context.startActivity(new Intent(Intent.ACTION_VIEW,
                             Uri.parse("http://www.linkedin.com/profile/view?id="+url)));
-                }
+
             }
         });
 
@@ -106,12 +101,9 @@ public class DeveloperAdapter extends BaseAdapter {
         facebookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/" + model.getFacebookUrl()));
-                    context.startActivity(intent);
-                } catch (Exception e) {
-                    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/" + model.getFacebookUrl())));
-                }
+
+                context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/" + model.getFacebookUrl())));
+
             }
         });
 
