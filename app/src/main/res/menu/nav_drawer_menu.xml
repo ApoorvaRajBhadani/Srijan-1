@@ -6,29 +6,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:title="Import" />
+            android:id="@+id/nav_home"
+            android:title="Home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_about"
+            android:title="About Us" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_contact"
+            android:title= "Contact Us" />
         <item
-            android:id="@+id/nav_manage"
-            android:title="Tools" />
-        <item
-            android:id="@+id/nav_share"
-            android:title="Share" />
-        <item
-            android:id="@+id/nav_send"
-            android:title="Send" />
-    </group>
+            android:id="@+id/nav_develops"
+            android:title="Developers" />
+           </group>
 
-    <item android:title="Communicate">
-        <menu>
 
-        </menu>
-    </item>
 
 </menu>

@@ -203,19 +203,15 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 switch (id) {
-                    case R.id.nav_camera:
-                        Toast.makeText(MainActivity.this, "My Account", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_home:
+                       startActivity(new Intent(MainActivity.this,MainActivity.class));
 
-                    case R.id.nav_gallery:
-                        Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
-                    case R.id.nav_slideshow:
-                        Toast.makeText(MainActivity.this, "My Cart", Toast.LENGTH_SHORT).show();
-                    case R.id.nav_manage:
-                        Toast.makeText(MainActivity.this, "My Cart", Toast.LENGTH_SHORT).show();
-                    case R.id.nav_share:
-                        Toast.makeText(MainActivity.this, "My Cart", Toast.LENGTH_SHORT).show();
-                    case R.id.nav_send:
-                        Toast.makeText(MainActivity.this, "My Cart", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_about:
+                        startActivity(new Intent(MainActivity.this,aboutus.class));
+                    case R.id.nav_contact:
+                        startActivity(new Intent(MainActivity.this,aboutus.class));
+                    case R.id.nav_develops:
+                        startActivity(new Intent(MainActivity.this,Developers.class));
                     default:
                         return true;
                 }
