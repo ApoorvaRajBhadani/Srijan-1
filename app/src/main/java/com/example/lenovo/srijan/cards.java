@@ -6,12 +6,28 @@ public class cards {
     public String titletext;
     public String titledesciption;
     public int logos ;
+    public  String stars;
+
+    public String getStars() {
+        return stars;
+    }
+
+    public void setStars(String stars) {
+        this.stars = stars;
+    }
 
     public cards(int sidecolor, String titletext, String titledesciption, int logos) {
         this.sidecolor = sidecolor;
         this.titletext = titletext;
         this.titledesciption = titledesciption;
         this.logos = logos;
+    }
+    public cards(int sidecolor, String titletext, String titledesciption, int logos,String stars) {
+        this.sidecolor = sidecolor;
+        this.titletext = titletext;
+        this.titledesciption = titledesciption;
+        this.logos = logos;
+        this.stars = stars;
     }
     public cards(int sidecolor, String titletext,  int logos) {
         this.sidecolor = sidecolor;

@@ -30,7 +30,7 @@ public class informals extends  MainActivity {
         super.onCreate(savedInstanceState);
         super.replaceContentLayout(R.layout.new_slide2, R.id.main);
         final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ImageView imageView = (ImageView) findViewById(R.id.imageView2);
+        ImageView imageView = (ImageView) findViewById(R.id.nav);
         slide2HeadingTextView = (TextView)findViewById(R.id.slide2_heading_textView);
         slide2HeadingTextView.setText("INFORMALS");
         imageView.setOnClickListener(new View.OnClickListener() {

@@ -119,6 +119,7 @@ import java.util.List;
 
 
                         }
+
                         if(cards1.getTitletext().equals("Fine Arts")){//yha pr dance ki jagah club wale names jo maine diye hai;
 
                             Intent intent = new Intent(mctx,FineArts.class);
@@ -174,6 +175,18 @@ import java.util.List;
 
 
                         }
+                        if(cards1.getSidecolor() == R.color.card4){//yha pr dance ki jagah club wale names jo maine diye hai;
+
+                            Intent intent = new Intent(mctx,stardetails.class);
+                            intent.putExtra("actvityname",cards1.getTitletext());
+                            mctx.startActivity(intent);
+                            if(mctx instanceof starattraction)//yha pr competion ki jagah jis class se arahe hai vo likhna.for example agar games se arahe hai toh games likhna
+
+                                ((starattraction) mctx).overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
+
+
+                        }
+
 
                     }
                 });

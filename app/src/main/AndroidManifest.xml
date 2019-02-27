@@ -84,6 +84,8 @@
         <activity android:name=".PoetrySlam" />
         <activity android:name=".Fanfic" />
         <activity android:name=".Harmony" />
+        <activity android:name=".starattraction"></activity>
+
 
         <service android:name=".MyFirebaseInstanceIDService">
             <intent-filter>
@@ -99,6 +101,7 @@
         <activity android:name=".Games" />
         <activity android:name=".Highlights" />
         <activity android:name=".Details" />
+        <activity android:name=".stardetails"></activity>
     </application>
 
 </manifest>

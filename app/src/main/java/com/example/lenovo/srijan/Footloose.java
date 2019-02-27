@@ -12,10 +12,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,7 +43,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 import static android.widget.Toast.LENGTH_LONG;
 
-public class Footloose extends AppCompatActivity {
+public class Footloose extends MainActivity {
 
     ViewPager viewPager;
     Button button,regis;//new line
@@ -57,11 +63,14 @@ public class Footloose extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.new_slide3);
+        //todo:replace setcontent view
+        super.replaceContentLayout(R.layout.new_slide3, R.id.main);
         imagesList = new ArrayList<>();
         imagesList.add(photos[0]);
         imagesList.add(photos[1]);
         init();
+        nav();//new line
+
 
         final TextView headingTextView = (TextView)findViewById(R.id.slide3_heading_textView);
         //todo: change heading text
@@ -77,7 +86,7 @@ public class Footloose extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //todo : copy
+
                 if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
                         connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
                     //we are connected to a network
@@ -117,7 +126,7 @@ public class Footloose extends AppCompatActivity {
 
 
     }
-    //todo : copy
+
     private void register() {
         Button register = (Button)findViewById(R.id.register);
 
@@ -154,7 +163,7 @@ public class Footloose extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //todo : copy
+
                 if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
                         connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
                     //we are connected to a network
@@ -165,7 +174,7 @@ public class Footloose extends AppCompatActivity {
                 if(connected){
                     Dialog.show();
                     //event name
-                    //todo:set firebase details
+
                     ref.child("Footloose").addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -189,6 +198,18 @@ public class Footloose extends AppCompatActivity {
             }
         });
     }
+    //todo:copy
+   private void nav(){
+       ImageView nav = (ImageView)findViewById(R.id.nav);
+       final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+       nav.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               drawerLayout.openDrawer(GravityCompat.START);
+           }
+       });
+   }
+
 
     private void place() {
         ImageView place = (ImageView)findViewById(R.id.place);
@@ -216,7 +237,7 @@ public class Footloose extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //todo : copy
+
                 if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
                         connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
                     //we are connected to a network
@@ -262,12 +283,13 @@ public class Footloose extends AppCompatActivity {
 
     //image slider code
     private void init() {
+
         viewPager = (ViewPager)findViewById(R.id.viewPager);
         //todo:set context
         viewPager.setAdapter(new adapterimage(Footloose.this,imagesList));
         CircleIndicator circleIndicator = (CircleIndicator)findViewById(R.id.indicator);
         circleIndicator.setViewPager(viewPager);
-        //todo:copy
+
          connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);//new line
 
         //final float density = getResources().getDisplayMetrics().density;

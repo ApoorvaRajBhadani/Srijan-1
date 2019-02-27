@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (InternetConnection.checkConnection(MainActivity.this)) {
-                    Intent intent = new Intent(MainActivity.this, NewsFeed.class);
+                    Intent intent = new Intent(MainActivity.this, starattraction.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
